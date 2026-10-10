@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#151431" />
+    <meta name="description" content="سرزمین خوابالوها؛ یک یادگاری کوچک و دوست‌داشتنی." />
+    <title>سرزمین خوابالوها</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell" aria-label="سرزمین خوابالوها">
+      <div class="sky" aria-hidden="true">
+        <span class="star star-one">✦</span><span class="star star-two">✧</span>
+        <span class="star star-three">✦</span><span class="star star-four">·</span>
+        <span class="star star-five">✧</span><span class="star star-six">✦</span>
+        <span class="shooting shooting-one"></span><span class="shooting shooting-two"></span>
+      </div>
+
+      <header class="mini-header" aria-label="ناوبری">
+        <button class="brand" type="button" data-go="welcome" aria-label="بازگشت به خانه">
+          <span>☾</span><b>خوابالو</b>
+        </button>
+        <button class="sound-toggle" type="button" aria-pressed="false" aria-label="فعال کردن صدای آرام">
+          <span aria-hidden="true">♡</span>
+        </button>
+      </header>
+
+      <section class="screen welcome-screen active" id="welcome" aria-labelledby="welcome-title">
+        <div class="moon-wrap" aria-hidden="true">
+          <div class="moon"><i></i><i></i><i></i></div>
+          <div class="moon-glow"></div>
+        </div>
+        <div class="cloud cloud-back" aria-hidden="true"></div>
+        <div class="cat-scene" aria-hidden="true">
+          <div class="cat-tail"></div>
+          <div class="cat-body"><span class="cat-paw paw-left"></span><span class="cat-paw paw-right"></span></div>
+          <div class="cat-head"><span class="ear ear-left"></span><span class="ear ear-right"></span><span class="cat-face">ᵕ</span><span class="cat-cheek cheek-left"></span><span class="cat-cheek cheek-right"></span></div>
+          <div class="zzz"><span>z</span><span>z</span><span>z</span></div>
+        </div>
+        <div class="intro-copy">
+          <p class="eyebrow">یه گوشهٔ دنج، فقط برای تو</p>
+          <h1 id="welcome-title">به سرزمین<br /><em data-person-name>خوابالوی دوست‌داشتنی</em> خوش اومدی</h1>
+          <p class="subtext">اینجا قانون ساده‌ست: هر وقت خوابت اومد، با خیال راحت ناز کن. 💤</p>
+        </div>
+        <button class="primary-btn start-btn" type="button" data-go="quiz">
+          <span>بزن بریم بخوابیم</span><span aria-hidden="true">←</span>
+        </button>
+        <p class="hint">برای کشف سورپرایزها، آروم پیش برو ✦</p>
+      </section>
+
+      <section class="screen quiz-screen" id="quiz" aria-labelledby="quiz-title" hidden>
+        <div class="section-top">
+          <span class="section-icon">☁</span>
+          <div><p class="eyebrow">ایستگاه اول</p><h2 id="quiz-title">تست خوابالویی</h2></div>
+        </div>
+        <div class="progress" aria-label="پیشرفت آزمون"><span id="progress-bar"></span></div>
+        <p class="progress-label" id="progress-label">سؤال ۱ از ۳</p>
+        <article class="quiz-card" aria-live="polite">
+          <span class="question-sparkle" aria-hidden="true">✦</span>
+          <p class="question-number">سؤال <span id="question-number">۱</span></p>
+          <h3 id="question-text">اگر الان ساعت سه بعدازظهر باشد، تو کجایی؟</h3>
+          <div class="answers" id="answers"></div>
+        </article>
+        <button class="text-btn" type="button" data-go="welcome">برگشت به آسمون شب</button>
+      </section>
+
+      <section class="screen result-screen" id="result" aria-labelledby="result-title" hidden>
+        <div class="result-orbit" aria-hidden="true"><span>☾</span><i>✦</i><b>✧</b></div>
+        <p class="eyebrow">نتیجه کاملاً علمیِ تست</p>
+        <h2 id="result-title">در حال محاسبهٔ میزان خوابالویی...</h2>
+        <div class="sleep-meter" aria-label="درجه خوابالویی"><div class="meter-fill" id="meter-fill"></div><span>٪</span></div>
+        <p class="result-copy" id="result-copy"></p>
+        <div class="result-badge"><span>🏆</span><span id="result-badge">قهرمان چرت‌های کوتاه</span></div>
+        <button class="primary-btn" type="button" data-go="cloud"><span>اتاق اختصاصی من</span><span aria-hidden="true">←</span></button>
+      </section>
+
+      <section class="screen cloud-screen" id="cloud" aria-labelledby="cloud-title" hidden>
+        <div class="section-top">
+          <span class="section-icon">☾</span>
+          <div><p class="eyebrow">ایستگاه دوم</p><h2 id="cloud-title">اتاق ابری تو</h2></div>
+        </div>
+        <p class="cloud-lead">کلید را بزن تا چراغ‌های اتاق خودت روشن شود.</p>
+        <div class="room-card" id="room-card">
+          <div class="room-window"><span class="window-moon"></span><i>✦</i><b>·</b><em>✧</em></div>
+          <div class="room-lamp"><span></span><i></i></div>
+          <div class="room-bed"><div class="pillow"></div><div class="blanket"></div><div class="sleepy-bear">ᵕ</div></div>
+          <div class="room-cloud" aria-hidden="true"><i></i><i></i><i></i></div>
+          <p class="room-sign">تخت ابریِ <span data-person-name>خوابالوی دوست‌داشتنی</span></p>
+        </div>
+        <button class="room-switch" id="room-switch" type="button" aria-pressed="false"><span class="switch-dot"></span><span>چراغِ ستاره‌ها</span></button>
+        <button class="secondary-btn" type="button" data-go="note">یه نامه اینجاست <span>✉</span></button>
+      </section>
+
+      <section class="screen note-screen" id="note" aria-labelledby="note-title" hidden>
+        <div class="section-top">
+          <span class="section-icon">✉</span>
+          <div><p class="eyebrow">ایستگاه سوم</p><h2 id="note-title">قبل از خواب اینو باز کن</h2></div>
+        </div>
+        <p class="note-lead">یک نامهٔ کوچولو، برای وقت‌هایی که چشم‌ها دارند بسته می‌شوند.</p>
+        <button class="envelope" id="envelope" type="button" aria-expanded="false" aria-label="باز کردن نامه">
+          <span class="envelope-back"></span><span class="letter-seal">♥</span><span class="envelope-flap"></span><span class="envelope-front"></span>
+          <span class="tap-to-open">بزن بازش کن</span>
+        </button>
+        <article class="love-note" id="love-note" hidden aria-live="polite">
+          <span class="note-star">✦</span>
+          <p>می‌دونی چیه؟ اگر یک روز همهٔ دنیا تصمیم بگیرن بیدار بمونن، من مطمئنم تو یه گوشه با آرامش خوابت برده. 😂</p>
+          <p>خوابالو بودنت اون‌قدر بانمکه که آدم دلش نمیاد بیدارت کنه. فقط بین این همه خواب، یه ذره هم برای من جا نگه دار. <span>💗</span></p>
+          <p class="note-signature">شب‌هات نرم و قشنگ، <br />مثل ابرها.</p>
+        </article>
+        <button class="primary-btn sleepy-launch" type="button" data-go="sleepy"><span>من خوابم میاد</span><span aria-hidden="true">😴</span></button>
+      </section>
+
+      <section class="screen sleepy-screen" id="sleepy" aria-labelledby="sleepy-title" hidden>
+        <div class="sleepy-moon" aria-hidden="true"><div class="moon"><i></i><i></i></div></div>
+        <div class="sleepy-content">
+          <p class="eyebrow">حالت خواب فعال شد</p>
+          <h2 id="sleepy-title">باشه بابا...<br />برو بخواب!</h2>
+          <p>ماه نگهبانی می‌ده، ستاره‌ها روشنن، و فردا هم یک روز تازه‌ست.</p>
+          <div class="night-message">شب بخیر، <span data-person-name>خوابالوی دوست‌داشتنی</span> 🌙</div>
+        </div>
+        <div class="sleepy-cat" aria-hidden="true"><span class="sleepy-cat-ear left"></span><span class="sleepy-cat-ear right"></span><span>ᵕ</span><i></i></div>
+        <button class="soft-btn" type="button" data-go="welcome">برگردیم به اول قصه <span>↺</span></button>
+      </section>
+
+      <nav class="bottom-nav" aria-label="بخش‌های سایت">
+        <button type="button" data-go="welcome" class="nav-link active" aria-label="خانه"><span>☾</span><small>خانه</small></button>
+        <button type="button" data-go="quiz" class="nav-link" aria-label="تست"><span>☁</span><small>تست</small></button>
+        <button type="button" data-go="cloud" class="nav-link" aria-label="اتاق"><span>⌂</span><small>اتاق</small></button>
+        <button type="button" data-go="note" class="nav-link" aria-label="نامه"><span>✉</span><small>نامه</small></button>
+      </nav>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
